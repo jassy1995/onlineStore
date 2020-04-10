@@ -1,7 +1,7 @@
            <h3 class="justify-content-center">products</h3>
-        <div *ngFor="let products of product; index as productId" class="ml-5">
+        <div *ngFor="let products of product; index as id" class="ml-5">
                 <h5> 
-                <a class="text-primary" [title]="products.name + 'detail'" [routerLink]="['/products',productId]">
+                <a class="text-primary" [title]="products.name + 'detail'" [routerLink]="['/products',id]">
                         {{products.name}}
                         <!-- {{products.price | currency}} -->
                 </a>
