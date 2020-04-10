@@ -1,10 +1,20 @@
- <a [routerLink]="['/']">
-        <h1>My Store</h1>
-</a>
-
-<a class="button fancy-button">
-        <i class="material-icons">shopping cart</i>checkout</a>
-
+<div>
+<nav class="navbar navbar-expand bg-primary  navbar-sm mb-3"  style="min-height: 80px">
+    <h1 class="text-light" routerLink="/product-list">My Store</h1><br>
+    <button class=" bg-grey text-dark ml-5" routerLink="/cart"><a routerLink="/cart" class=" ml-5"></a>checkout</button>   
         
-                <router-outlet></router-outlet> 
+    </nav>
+<router-outlet></router-outlet>
+</div>
 
+
+
+
+
+
+
+
+
+
+         
+            

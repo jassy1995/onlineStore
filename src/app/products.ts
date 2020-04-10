@@ -1,7 +1,7 @@
 export const lists = [
     {
     name:"Tecno",
-    price:30000,
+    price:36000,
     description:"a very strong phone with one of the best screen"
 },
 {
@@ -11,17 +11,17 @@ export const lists = [
 },
 {
     name:"Iphone",
-    price:30000,
+    price:80000,
     description:"a great  phone with one of the best camera"
 },
 {
     name:"itel",
-    price:30000,
+    price:25000,
     description:"a very strong phone with one of the best battery"
 },
 {
-    name:"Tecno",
-    price:30000,
-    description:"a very smart phone with one of the best display"
+    name:"Samsung",
+    price:100000,
+    description:"a very smart phone with one of the best ui/ux"
 }
 ];

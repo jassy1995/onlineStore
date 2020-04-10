@@ -1,0 +1,9 @@
+
+<div class="cart-item" *ngFor="let item of items;let i = index">
+    <h3 class="ml-2">{{i+1}}</h3>
+   <h3 class="ml-3">product: <span> {{item.name}}</span></h3>
+<h3 class="ml-3">price:<span class="ml-2">{{item.price | currency}}</span></h3>
+<h2><button class="btn btn-danger btn-sm ml-3" (click)="service.delete(i)">
+        <span class="fa fa-trash">Delete</span>
+    </button></h2>
+</div>
