@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { lists } from '../products'
 import { CartServiceService } from '../cart-service.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,9 +11,21 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
-  public product = [];
-  constructor(public route:ActivatedRoute,public service:CartServiceService,public http:HttpClient,public router:Router) { }
-  public productId ;
+  constructor(public route:ActivatedRoute) { }
+  
+  ngOnInit() {
+  }
+  products = lists;
+ 
+  share(){
+    window.alert('the product has been shared');
+  }
+  onNotify(){
+    window.alert('you will be notify when the product go on sale');
+  }
+}
+
+// public productId ;
 // public products = []
 
   // public product = [
@@ -22,17 +35,6 @@ export class ProductListComponent implements OnInit{
   //   {id:"4",name:"Samsung",description:"very smart",price:"150000"},
   //   {id:"5",name:"Itel",description:"long life battery",price:"100000"},
   // ]
-  ngOnInit() {
-  }
-  // product = this.products;
- 
-  share(){
-    window.alert('the product has been shared');
-  }
-  onNotify(){
-    window.alert('you will be notify when the product go on sale');
-  }
-}
 
 
 

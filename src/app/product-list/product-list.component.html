@@ -1,17 +1,17 @@
            <h3 class="justify-content-center">products</h3>
-        <div *ngFor="let products of product; index as id" class="ml-5">
+        <div *ngFor="let product of products; index as productId" class="ml-5">
                 <h5> 
-                <a class="text-primary" [title]="products.name + 'detail'" [routerLink]="['/products',id]">
-                        {{products.name}}
-                        <!-- {{products.price | currency}} -->
+                <a class="text-primary" [title]="product.name + 'detail'" [routerLink]="['/products',productId]">
+                        {{product.name}}
+                
                 </a>
                 </h5>
-                <p *ngIf="products.description">
-                        Description: {{products.description}}
+                <p *ngIf="product.description">
+                        Description: {{product.description}}
                 </p>
                 <button (click)="share()" class="btn btn-primary text-light">share</button>
                 <app-product-alert
-                 [products] = "products"
+                 [product] = "product"
                  (notify)="onNotify()">
                 </app-product-alert>
             </div>

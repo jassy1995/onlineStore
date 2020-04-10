@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
-import { list } from '../products'
+import { lists } from '../products'
 import { CartServiceService } from '../cart-service.service';
 
 @Component({
@@ -9,11 +9,27 @@ import { CartServiceService } from '../cart-service.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  [x: string]: any;
+  // [x: string]: any;
+  product;
 
-  constructor(private route:ActivatedRoute,public service:CartServiceService) { }
-public  products;
-public productId;
+  constructor(private route:ActivatedRoute) { }
+
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params=>{
+    this.product = lists[+ params.get('productId')];
+    });
+    
+      
+  }
+
+}
+
+
+
+
+// public  products;
+// public productId;
   // public product = [
   //   {id:"1",name:"Tecno",description:"fast working",price:"200000"},
   //   {id:"2",name:"Geonee",description:"larger storage",price:"250000"},
@@ -22,14 +38,6 @@ public productId;
   //   {id:"5",name:"Itel",description:"long life battery",price:"100000"},
   // ]
 
-  ngOnInit() {
-    // this.route.paramMap.subscribe(params=>{
-    // this.product = list [+ params.get('productId')];
-    // });
-    this.productId=this.actRout.snapshot.params.productId;
-    let thisProduct=this.service.product.filter(s=> s.id==this.productId);
-    this.products=thisProduct[0]
-      
-  }
-
-}
+  // this.productId=this.actRout.snapshot.params.productId;
+    // let thisProduct=this.service.product.filter(s=> s.id==this.productId);
+    // this.products=thisProduct[0]

@@ -9,7 +9,7 @@ import { Output,EventEmitter } from '@angular/core'
   styleUrls: ['./product-alert.component.css']
 })
 export class ProductAlertComponent {
-@Input() products;
+@Input() product;
 @Output() notify = new EventEmitter();
 
   constructor() { }

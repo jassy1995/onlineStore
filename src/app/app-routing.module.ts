@@ -18,17 +18,8 @@ const routes: Routes = [
   { path:"",redirectTo:"/home",pathMatch:"full"},
   { path:"home",component:HomeComponent},
   { path:"product-list",component:ProductListComponent},
-  //  { path:"product_alert",component:ProductAlertComponent},
-  { path:"products/:id",component:ProductDetailsComponent},
-  { path:"students",component:StudentsComponent,children:[
-    { path:"boys",component:BoysComponent},
-    { path:"girls",component:GirlsComponent},
-    { path:"profile",component:ProfileComponent},
-  ]},
-  { path:"gallary",component:GalleryComponent,children:[
-    { path:"aboutus",component:AboutUsComponent},
-    { path:"complain",component:ComplainComponent},
-  ]},
+  { path:"products/:productId",component:ProductDetailsComponent},
+   { path:"product_alert",component:ProductAlertComponent},
   { path:"**",component:NotFoundComponent}
 ];
 
